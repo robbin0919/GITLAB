@@ -1,0 +1,7 @@
+#
+#使用Pull檢查有沒有檔案異動，並更新至本機端版本
+#環境設定
+001 建立Branch：pull_test_1 
+002 Chack out pull_test_1
+003 從Github 更新Readmd.md內容。
+#Start
