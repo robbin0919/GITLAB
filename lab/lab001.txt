@@ -24,3 +24,11 @@ Are you sure you want to merge 'origin/main' into your current branch?
 002 Chack out pull_test_1
 003 從Github 更新main\test_temp.TXT內容。
 #Start
+
+
+#版本衝突處理
+#情境1
+#在SERVER端Main/test_temp.TXT有修改，同時本機端fetch_test_1/test_temp.TXT也有修改
+
+#情境2
+#在SERVER端Main/test_temp.TXT有修改，同時本機端fetch_test_1/test_temp.TXT也有修改
