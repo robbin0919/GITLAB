@@ -1,8 +1,0 @@
-#版本衝突處理
-#情境1
-#在SERVER端Main/test_temp.TXT有修改，同時本機端fetch_test_1/test_temp.TXT也有修改
-
-#情境2
-#在SERVER端Main/test_temp.TXT有修改，同時本機端fetch_test_1/test_temp.TXT也有修改
-
-
