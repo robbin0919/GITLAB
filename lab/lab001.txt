@@ -17,3 +17,10 @@ Are you sure you want to merge 'origin/main' into your current branch?
 
 [ ] Create a new commit even if fast-forward is possible  [確定] [取消]
 
+#
+#使用Pull檢查有沒有檔案異動，並更新至本機端版本
+#環境設定
+001 建立Branch：pull_test_1 
+002 Chack out pull_test_1
+003 從Github 更新main\test_temp.TXT內容。
+#Start
