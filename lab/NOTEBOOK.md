@@ -19,7 +19,7 @@
     * 測試完成後，Release 分支將會同時合併到 Master 以及 Develop 這兩個分 支上。
         * Master 分支是上線版本，而再合併回 Develop 分支的目的，是因為可能在 Release 分支上 還會測到並修正一些問題，所以需要跟 Develop 分支同步，免得之後的版本又再度出現同樣的 問題。 
 
-* ■ Feature 分支 
+* Feature 分支 
     * 當要開始新增或修改功能的時候，就是使用 Feature 分支的時機。Feature 分支都是從 Develop 分 支來的，完成之後會再併回 Develop 分支。 
     * 該分支由開發人員自行控管，檔案Commit時機點，視團隊工作管理而定，如：
         * 情境1：只Commit已在進行UT中的版本
