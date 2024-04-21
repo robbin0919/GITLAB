@@ -1,9 +1,30 @@
-#版本更新流程
 #使用Fetch檢查有沒有檔案異動，並更新至本機端版本
+#-------------------------------------------------------------
 #環境設定
-001 建立Branch：fetch_test_1 
-002 Chack out fetch_test_1
-003 從Github main 更新test_temp.TXT內容。
+001 在本機 Chack out main
+002 在Github 更新  main\test_temp.TXT。
+#Start
+004 從SourceTree 執行Fetch
+005 注意main與origin/main的差異
+    注意本機目錄檔案是否有更新。
+006 進行origin/main Merge
+#-------------------------------------------------------------
+#環境設定
+001 在本機 Chack out main
+002 在本機 更新 main\test_temp.TXT。
+003 在Github 更新  main\test_temp.TXT。
+#Start
+004 從SourceTree 執行Fetch
+005 注意main與origin/main的差異
+    注意本機目錄檔案是否有更新。
+006 進行origin/main Merge
+
+#-------------------------------------------------------------
+#環境設定
+001 從 main 建立Branch：fetch_test_1 
+002 在本機 Chack out fetch_test_1
+002 在本機 更新 fetch_test_1\test_temp.TXT
+003 在Github 更新  main\test_temp.TXT。
 #Start
 004 從SourceTree 執行Fetch
 005 注意main與origin/main的差異
