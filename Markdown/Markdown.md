@@ -1,3 +1,5 @@
+<https://support.typora.io/Draw-Diagrams-With-Markdown/>  
+
 ```mermaid
 graph LR
 A[Hard edge] -->B(Round edge)
