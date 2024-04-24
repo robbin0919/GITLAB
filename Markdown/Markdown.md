@@ -12,7 +12,7 @@ A[Hard edge] -->B(Round edge)
 title: Example Git diagram  
 ---  
 ```mermaid
-gitGraph
+gitGraph 
        commit
        commit
        branch develop
@@ -25,4 +25,17 @@ gitGraph
        commit
 ```
 
+```mermaid
+gitGraph  TB
+       commit
+       commit
+       branch develop
+       checkout develop
+       commit
+       commit
+       checkout main
+       merge develop
+       commit
+       commit
+```
  
