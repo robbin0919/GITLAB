@@ -7,6 +7,9 @@ A[Hard edge] -->B(Round edge)
     C -->|One| D[Result one]
     C -->|Two| E[Result two]
 ```
+---  
+<https://mermaid.js.org/syntax/gitgraph.html>  
+---  
 ```mermaid
 gitGraph
        commit
