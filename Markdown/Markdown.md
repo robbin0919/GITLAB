@@ -12,7 +12,7 @@ A[Hard edge] -->B(Round edge)
 title: Example Git diagram  
 ---  
 ```mermaid
-gitGraph 
+gitGraph LR:
        commit
        commit
        branch develop
