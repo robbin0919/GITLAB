@@ -26,7 +26,7 @@ gitGraph
 ```
 
 ```mermaid
-gitGraph  TB
+gitGraph TB:
        commit
        commit
        branch develop
