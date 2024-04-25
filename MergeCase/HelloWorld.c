@@ -3,5 +3,5 @@
 #include <stdio.h>
 int main()
 {
-    printf("Sum = %d", sum);
+    printf("Hello World!!");
 }
