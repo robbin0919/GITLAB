@@ -1,4 +1,4 @@
-
+```mermaid
   %%{init: { 'logLevel': 'debug', 'theme': 'default' } }%%
       gitGraph
         commit type:HIGHLIGHT
@@ -42,3 +42,4 @@
         merge main
         checkout develop
         merge release
+```
