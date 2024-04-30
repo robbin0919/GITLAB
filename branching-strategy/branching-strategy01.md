@@ -15,5 +15,6 @@
       checkout develop
       merge Feature/A01
       checkout  Feature/A02
+      merge develop
       commit
 ```      
