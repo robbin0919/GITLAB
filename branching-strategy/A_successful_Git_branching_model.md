@@ -7,37 +7,46 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
 
 
 ```mermaid
+
  sequenceDiagram
     autonumber
-
-    master-) develop:Creating a feature
-     loop coding\ST\SIT
-    develop-)Feature: Creating a feature  
+    participant  master
+    participant  develop
+    participant  Feature
     actor PG1
+    participant  Release
+    participant  Feature2
+    actor PG2
+
+    master -) develop:Creating a feature
+     loop coding\ST\SIT
+    develop -)Feature: Creating a feature  
     Feature -)PG1: checkOut
     loop coding
     PG1 -)PG1: Commit
     end
     PG1 -) Feature:push 
-    Feature -)develop: merge
+    Note over develop,Feature:merge(PR)     
+    Feature -)develop:  
     develop-)develop: ST/SIT  
     end     
     develop--)Release: Creating a Release
    loop UAT 
     Release -)Release: TEST
-
-    actor PG2
-    Release-)Feature2: Creating a feature  
+    Release -)Feature2: Creating a feature  
     Feature2 -)PG2: checkOut
     loop coding
     PG2 -)PG2: Commit
     end
     PG2 -) Feature2:push 
-    Feature2 -) Release:merge 
+    Note over Release,Feature2:merge(PR) 
+    Feature2 -) Release: 
     end
-    Release --)master: merge
-    Release --)develop: merge
-   
+    Note over Release,master:merge(PR) 
+    Release --)master: 
+    Note over Release,develop:merge(PR) 
+    Release --)develop : 
+
 ``` 
 
  
