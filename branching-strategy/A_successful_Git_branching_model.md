@@ -18,8 +18,8 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
     participant  Feature2
     actor PG2
 
-    master -) develop:Creating a feature
-     loop coding\ST\SIT
+    master -) develop:Creating a branche
+    loop coding\ST\SIT
     develop -)Feature: Creating a feature  
     Feature -)PG1: checkOut
     loop coding
@@ -31,7 +31,7 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
     develop-)develop: ST/SIT  
     end     
     develop--)Release: Creating a Release
-   loop UAT 
+   loop coding\UAT 
     Release -)Release: TEST
     Release -)Feature2: Creating a feature  
     Feature2 -)PG2: checkOut
