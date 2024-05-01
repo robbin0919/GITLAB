@@ -10,7 +10,8 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
  sequenceDiagram
     autonumber
 
-    master-) develop:01
+    master-) develop:Creating a feature
+     loop coding\ST\SIT
     develop-)Feature: Creating a feature  
     actor PG1
     Feature -)PG1: checkOut
@@ -18,7 +19,9 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
     PG1 -)PG1: Commit
     end
     PG1 -) Feature:push 
-    Feature -)develop: merge     
+    Feature -)develop: merge
+    develop-)develop: ST/SIT  
+    end     
     develop--)Release: Creating a Release
    loop UAT 
     Release -)Release: TEST
@@ -30,33 +33,12 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
     PG2 -)PG2: Commit
     end
     PG2 -) Feature2:push 
-    PG2 -) Release:merge 
+    Feature2 -) Release:merge 
     end
     Release --)master: merge
     Release --)develop: merge
    
 ``` 
 
+ 
   
-   
-  
-  
-  
-  
-  
- =============================================================================== 
-
-```mermaid
-sequenceDiagram
-    Alice->>Bob: Hello Bob, how are you ?
-    Bob->>Alice: Fine, thank you. And you?
-    create participant Carl
-    Alice->>Carl: Hi Carl!
-    create actor D as Donald
-    Carl->>D: Hi!
-    destroy Carl
-    Alice-xCarl: We are too many
-    destroy Bob
-    Bob->>Alice: I agree
-
-```
