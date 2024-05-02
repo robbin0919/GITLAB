@@ -17,4 +17,5 @@
       checkout  Feature/A02
       merge develop
       commit
+      commit
 ```      
