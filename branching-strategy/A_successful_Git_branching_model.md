@@ -1,10 +1,6 @@
 A successful Git branching model  
 https://nvie.com/posts/a-successful-git-branching-model/  
-
 https://mermaid.js.org/syntax/sequenceDiagram.html  
-
-
-
 
 ```mermaid
 
@@ -48,4 +44,4 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
     Note over Release,develop:merge(PR) 
     Release --)develop : 
 
-``` 
+```
