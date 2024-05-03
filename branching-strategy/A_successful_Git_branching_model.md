@@ -28,6 +28,7 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
     PG1 -) Feature:push 
     Note over develop,Feature:merge(PR)     
     Feature -)develop:  
+    develop -)Feature: delete feature  
     develop-)develop: ST/SIT  
     end     
     develop--)Release: Creating a Release
@@ -48,6 +49,3 @@ https://mermaid.js.org/syntax/sequenceDiagram.html
     Release --)develop : 
 
 ``` 
-
- 
-  
