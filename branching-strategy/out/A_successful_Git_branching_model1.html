@@ -142,7 +142,18 @@
                     data-dark-mode-theme="dark"
                     data-light-mode-theme="default"></span>
                 <p>#版本1</p>
-<pre style="all:unset;"><div class="mermaid">sequenceDiagram
+<pre style="all:unset;"><div class="mermaid">%%{
+  init: {
+    "sequence": {
+      "actorFontFamily": "monospace",
+      "actorFontWeight": "bold",
+      "messageFontFamily": "monospace",
+      "messageFontWeight": "bold",
+      "noteFontWeight": "bolder"
+    }
+  }
+}%%
+ sequenceDiagram
     autonumber
     participant  master
     participant  develop
@@ -155,16 +166,18 @@
     master -) develop:Creating a branche
 
     develop -)Feature: Creating a feature  
-    develop--)Release: Creating a Release
+    develop -)Release: Creating a Release
     loop coding\ST\SIT
-    Feature -)PG1: checkOut
-    loop coding
-    PG1 -)PG1: Commit
-    end
-    PG1 -) Feature:push 
-    Feature -)Release: merge
+        loop coding
+          develop -)Feature: pull
+          Feature -)PG1:  checkOut   
+          PG1 -)PG1: Commit
+          PG1 -) Feature:push 
+        end
 
-    Release-)Release: ST/SIT  
+        Feature --)Release: merge
+
+        Release-)Release: ST/SIT  
     end     
     Release --)master: merge 
     Release --)develop : merge 

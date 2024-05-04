@@ -2,7 +2,17 @@
  
 
 ```mermaid
-
+ %%{
+  init: {
+    "sequence": {
+      "actorFontFamily": "monospace",
+      "actorFontWeight": "bold",
+      "messageFontFamily": "monospace",
+      "messageFontWeight": "bold",
+      "noteFontWeight": "bolder"
+    }
+  }
+}%%
  sequenceDiagram
     autonumber
     participant  master
@@ -16,15 +26,16 @@
     master -) develop:Creating a branche
 
     develop -)Feature: Creating a feature  
-    develop--)Release: Creating a Release
+    develop -)Release: Creating a Release
     loop coding\ST\SIT
         loop coding
-          Feature -)PG1: checkOut
-          develop -)Feature: pull         
+          develop -)Feature: pull
+          Feature -)PG1:  checkOut   
           PG1 -)PG1: Commit
+          PG1 -) Feature:push 
         end
-        PG1 -) Feature:push 
-        Feature -)Release: merge
+
+        Feature --)Release: merge
 
         Release-)Release: ST/SIT  
     end     
