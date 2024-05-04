@@ -142,7 +142,19 @@
                     data-dark-mode-theme="dark"
                     data-light-mode-theme="default"></span>
                 <p>#版本2</p>
-<pre style="all:unset;"><div class="mermaid">sequenceDiagram
+<pre style="all:unset;"><div class="mermaid">%%{
+  init: {
+    "sequence": {
+      "actorFontFamily": "monospace",
+      "actorFontWeight": "bold",
+      "messageFontFamily": "monospace",
+      "messageFontWeight": "bold",
+      "noteFontWeight": "bolder"
+    }
+  }
+}%%
+
+ sequenceDiagram
     autonumber
     participant  master
     participant  develop
@@ -154,35 +166,42 @@
 
     master -) develop:Creating a branche
     loop coding\ST\SIT
-    develop -)Feature: Creating a feature  
-    Feature -)PG1: checkOut
-    loop coding
-    PG1 -)PG1: Commit
-    end
-    PG1 -) Feature:push 
-    Note over develop,Feature:merge(PR)     
-    Feature -)develop:  
-    develop -)Feature: delete feature  
-    develop-)develop: ST/SIT  
+        develop -) Feature: Creating a feature  
+        loop coding
+            develop -)Feature: pull 
+            Feature -)PG1: checkOut    
+            PG1 -)PG1: Commit
+            PG1 -) Feature:push 
+        end
+
+        Note over develop,Feature:merge(PR)     
+        Feature --)develop:  
+        develop -)Feature: delete feature  
+        develop-)develop: ST/SIT  
     end     
-    develop--)Release: Creating a Release
+    develop-)Release: Creating a Release
    loop coding\UAT 
-    Release -)Release: TEST
-    Release -)Feature2: Creating a feature  
-    Feature2 -)PG2: checkOut
-    loop coding
-    PG2 -)PG2: Commit
-    end
-    PG2 -) Feature2:push 
-    Note over Release,Feature2:merge(PR) 
-    Feature2 -) Release: 
-    Release -)Feature2: delete feature  
+        Release -)Release: TEST
+        Release -)Feature2: Creating a feature  
+
+        loop coding
+            Release -)Feature2: pull     
+            Feature2 -)PG2: checkOut
+            PG2 -)PG2: Commit
+            PG2 -) Feature2:push 
+        end
+
+        Note over Release,Feature2:merge(PR) 
+        Feature2 --) Release: 
+        Release -)Feature2: delete feature  
     end
     Note over Release,master:merge(PR) 
     Release --)master: 
     Note over Release,develop:merge(PR) 
     Release --)develop : 
-    develop -)Release: delete Release  </div></pre>
+    develop -)Release: delete Release  
+ 
+ </div></pre>
 
             
             <script async type="text/javascript">
