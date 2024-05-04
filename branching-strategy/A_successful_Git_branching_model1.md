@@ -16,32 +16,19 @@
     master -) develop:Creating a branche
 
     develop -)Feature: Creating a feature  
+    develop--)Release: Creating a Release
     loop coding\ST\SIT
     Feature -)PG1: checkOut
     loop coding
     PG1 -)PG1: Commit
     end
     PG1 -) Feature:push 
-    Note over develop,Feature:merge(PR)     
-    Feature -)develop:  
+    Feature -)Release: merge
 
-    develop-)develop: ST/SIT  
+    Release-)Release: ST/SIT  
     end     
-    develop--)Release: Creating a Release
-   loop coding\UAT 
-    Release -)Release: TEST
-    Release -)Feature2: Creating a feature  
-    Feature2 -)PG2: checkOut
-    loop coding
-    PG2 -)PG2: Commit
-    end
-    PG2 -) Feature2:push 
-    Note over Release,Feature2:merge(PR) 
-    Feature2 -) Release: 
-    end
-    Note over Release,master:merge(PR) 
-    Release --)master: 
-    Note over Release,develop:merge(PR) 
-    Release --)develop : 
-
+    Release --)master: merge 
+    Release --)develop : merge 
+    develop -)Feature: delete feature  
+    develop -)Release: delete Release  
 ```

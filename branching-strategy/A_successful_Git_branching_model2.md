@@ -35,10 +35,11 @@
     PG2 -) Feature2:push 
     Note over Release,Feature2:merge(PR) 
     Feature2 -) Release: 
+    Release -)Feature2: delete feature  
     end
     Note over Release,master:merge(PR) 
     Release --)master: 
     Note over Release,develop:merge(PR) 
     Release --)develop : 
-
+    develop -)Release: delete Release  
 ```
