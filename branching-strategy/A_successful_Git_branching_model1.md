@@ -18,14 +18,15 @@
     develop -)Feature: Creating a feature  
     develop--)Release: Creating a Release
     loop coding\ST\SIT
-    Feature -)PG1: checkOut
-    loop coding
-    PG1 -)PG1: Commit
-    end
-    PG1 -) Feature:push 
-    Feature -)Release: merge
+        loop coding
+          Feature -)PG1: checkOut
+          develop -)Feature: pull         
+          PG1 -)PG1: Commit
+        end
+        PG1 -) Feature:push 
+        Feature -)Release: merge
 
-    Release-)Release: ST/SIT  
+        Release-)Release: ST/SIT  
     end     
     Release --)master: merge 
     Release --)develop : merge 
