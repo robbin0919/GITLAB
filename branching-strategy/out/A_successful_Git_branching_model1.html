@@ -141,9 +141,7 @@
             <span id="markdown-mermaid" aria-hidden="true"
                     data-dark-mode-theme="dark"
                     data-light-mode-theme="default"></span>
-                <p>A successful Git branching model<br>
-<a href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a></p>
-<p><a href="https://mermaid.js.org/syntax/sequenceDiagram.html">https://mermaid.js.org/syntax/sequenceDiagram.html</a></p>
+                <p>#版本1</p>
 <pre style="all:unset;"><div class="mermaid">sequenceDiagram
     autonumber
     participant  master
@@ -155,33 +153,23 @@
     actor PG2
 
     master -) develop:Creating a branche
-    loop coding\ST\SIT
+
     develop -)Feature: Creating a feature  
+    develop--)Release: Creating a Release
+    loop coding\ST\SIT
     Feature -)PG1: checkOut
     loop coding
     PG1 -)PG1: Commit
     end
     PG1 -) Feature:push 
-    Note over develop,Feature:merge(PR)     
-    Feature -)develop:  
-    develop-)develop: ST/SIT  
+    Feature -)Release: merge
+
+    Release-)Release: ST/SIT  
     end     
-    develop--)Release: Creating a Release
-   loop coding\UAT 
-    Release -)Release: TEST
-    Release -)Feature2: Creating a feature  
-    Feature2 -)PG2: checkOut
-    loop coding
-    PG2 -)PG2: Commit
-    end
-    PG2 -) Feature2:push 
-    Note over Release,Feature2:merge(PR) 
-    Feature2 -) Release: 
-    end
-    Note over Release,master:merge(PR) 
-    Release --)master: 
-    Note over Release,develop:merge(PR) 
-    Release --)develop : </div></pre>
+    Release --)master: merge 
+    Release --)develop : merge 
+    develop -)Feature: delete feature  
+    develop -)Release: delete Release  </div></pre>
 
             
             <script async type="text/javascript">
