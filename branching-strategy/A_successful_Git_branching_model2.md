@@ -1,7 +1,4 @@
-A successful Git branching model  
-https://nvie.com/posts/a-successful-git-branching-model/  
-https://mermaid.js.org/syntax/sequenceDiagram.html  
-
+#版本2  
 ```mermaid
 
  sequenceDiagram
