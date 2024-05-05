@@ -7,7 +7,7 @@
 0501 VScode 2 Github 帳號切換
 06  protected branch?
 07  protected branch
-08
+08  pull request
 09
 10
 11
