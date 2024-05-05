@@ -15,7 +15,7 @@
         * 分支來源：從develop
     * Release
         * 分支來源：從develop
-        * 分支完成後，再將要Release（ST/SIT/UAT）的Feature branc，merge進該Release，可彈性調整
+        * 分支完成後，再將要Release（ST/SIT/UAT）的Feature branch，merge進該Release，可彈性調整
   * 版本2：
     * master:正式環境版本，可部署正式環境，永久保留
     * develop：最新版，可進行測試版（ST/SIT），永久保留
@@ -33,4 +33,7 @@
 * Feature branch生命週  
   * 版本1：最少要到修改需求上線才會刪除，會重覆使用
   * 版本2：程式只要merge(PR)執行完成，需執行刪除，不會重覆使用，若需再修改，以最新的develop版本，再建立分支。
-* 開發人員 
+* 待討論
+  * 分支（Feature branch）建立，那個角色來告知開發人員？或是開發人員自行判斷?
+  * 開發人員提出merge(PR)，申請程式merge，由那個角色處理?
+  * 如何讓處理PR(Pull requests)的人，知道每個PR的處理順序 
