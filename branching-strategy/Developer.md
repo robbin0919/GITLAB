@@ -14,27 +14,24 @@
 
  sequenceDiagram
     autonumber
-    participant  master
-    participant  develop
-    participant  Feature
-    actor PG1
-    participant  Release
-    participant  Feature2
-    actor PG2
 
-    master -) develop:Creating a branche
-    loop coding\ST\SIT
-        develop -) Feature: Creating a feature  
+    participant  Source Code
+    participant  branche
+    actor PG1
+
+
+    loop 
+        Source Code -) branche: Creating a feature  
         loop coding
-            develop -)Feature: pull 
-            Feature -)PG1: checkOut    
+            Source Code -)branche: pull 
+            branche -)PG1: checkOut    
             PG1 -)PG1: Commit
-            PG1 -) Feature:push 
+            PG1 -) branche:push 
         end
 
-        Note over develop,Feature:merge(PR)     
-        Feature --)develop:  
-        develop -)Feature: delete feature  
-        develop-)develop: ST/SIT  
+        Note over Source Code,branche:merge(PR)     
+        branche --) Source Code:  
+        Source Code -)branche: delete branche  
+       
     end     
-    develop-)Release: Creating a Release
+
