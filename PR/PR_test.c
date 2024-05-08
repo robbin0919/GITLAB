@@ -6,7 +6,7 @@ int main() {
 
   // print Hello World to the screen
   printf("Hello World");
-        printf("Enter an integer: ");
+  printf("Enter an integer: ");
   scanf("%d", &number);
     // true if number is less than 
     
@@ -16,7 +16,6 @@ int main() {
   for (i = 1; i < 11; ++i)
     {
       printf("%d ", i);
-            printf("%d ", i);
     }
   return 0;
   }
