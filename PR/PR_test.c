@@ -8,10 +8,11 @@ int main() {
   printf("Hello World");
   printf("Enter an integer: ");
   scanf("%d", &number);
-    // true if number is less than 1111
+
+    // true if number is less than 2222
     
     if (number < 10) {
-        printf("You entered111 %d.\n", number);
+        printf("You entered2222 %d.\n", number);
     }
   for (i = 1; i < 11; ++i)
     {
