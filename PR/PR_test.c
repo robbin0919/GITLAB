@@ -8,6 +8,7 @@ int main() {
   printf("Hello World");
   printf("Enter an integer: ");
   scanf("%d", &number);
+
     // true if number is less than 2222
     
     if (number < 10) {
