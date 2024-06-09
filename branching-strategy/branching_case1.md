@@ -51,11 +51,11 @@ Feature 分支、Release 分支、Hotfix 分支是任務型分支，任務結束
 * Release 分支
   * 執行角色：?????
   * 從Master開出分支
-  * 分支名稱：yyyymmdd為建立日期
-    * Release_st_yyyymmdd
-    * Release_sit_yyyymmdd
-    * Release_uat_yyyymmdd
-    * Hotfix_yyyymmdd
+  * 分支名稱：
+    * Release_st
+    * Release_sit
+    * Release_uat
+    * Release_Hotfix_yyyymmdd
   * 每次重新部署都要重新建立、重新合併
   * 依上線順序將各個Feature 分支合併進來。
     * 合併的觸發點不同，要注意commit 記錄會發生受到污染機率
