@@ -1,5 +1,3 @@
-以下是不同協同作業型態客製，重新定義各分支  
-目的：達到不同需求不同上線時間，進行開發與測試。
 
 
 * Master 分支 ( branch )  
@@ -28,6 +26,9 @@
         *	視為工作進度回報一環。  
 
 ------
+以下是供不同協同作業型態客製，重新定義各分支  
+目的：達到不同需求不同上線時間，進行開發與測試。
+
 
 Master 分支、Develop 分支為主要分支：  
 * 不會刪除、不允許刪除，若有發生誤刪、遺失、受污染無法救回：
@@ -50,12 +51,18 @@ Feature 分支、Release 分支、Hotfix 分支是任務型分支，任務結束
 * Release 分支
   * 執行角色：?????
   * 從Master開出分支
-  * 分支名稱：Release_st_yyyymmdd、Release_sit_yyyymmdd、Release_uat_yyyymmdd，yyyymmdd為建立日期
-  * 每次程式部署都要重新建立
+  * 分支名稱：yyyymmdd為建立日期
+    * Release_st_yyyymmdd
+    * Release_sit_yyyymmdd
+    * Release_uat_yyyymmdd
+    * Hotfix_yyyymmdd
+  * 每次重新部署都要重新建立、重新合併
   * 依上線順序將各個Feature 分支合併進來。
     * 合併的觸發點不同，要注意commit 記錄會發生受到污染機率
       * 從Release將其他分支合併進來
+        * 合併發生conflict處理記錄只會存在Release.  
       * 從Feature、Hotfix合併進Release
+        * 合併發生conflict處理記錄只會存在Feature、Hotfix、Release.
     * conflict處理：
       *  依執行角色決定，會有不同處理流程
   * 上線完成後，合併至Master
@@ -64,3 +71,5 @@ Feature 分支、Release 分支、Hotfix 分支是任務型分支，任務結束
   * 執行角色：開發人員
   * 從Develop開出分支
   * 需要依需求的上線順序，進行程式先退版再修改或直接修改。
+  * 程式修改完可測試，開發人員自行合併Develop，供其他人員開發取用。
+  * 上線完成後，即可刪除。
